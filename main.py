@@ -117,7 +117,7 @@ def create_comment(post_id: int, comment: CommentCreate,
 def retrieve_user_posts(user_name: str,
                         db: Session = Depends(get_db),
                         Current_user: str = Depends(get_current_user)):
-    cache_key=user_name
+    cache_key = user_name
     print(cache_key)
     cached = get_cachesd_data(cache_key)
     if cached:
