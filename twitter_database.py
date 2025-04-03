@@ -12,7 +12,7 @@ load_dotenv(".env")
 password=os.environ.get("mydbpass")
 
 #Configure SQLAlchemy Connection to Local PostgreSQL
-DATABASE_URL = f"postgresql://reyhaneh:{password}@localhost:5432/mydatabase"
+DATABASE_URL = f"postgresql://reyhaneh:{password}@db:5432/mydatabase"
 engine = create_engine(DATABASE_URL)
 
 #Create a sesssion
